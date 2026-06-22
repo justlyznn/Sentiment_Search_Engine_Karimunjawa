@@ -357,20 +357,15 @@ st.markdown(
 
 st.markdown("""
 <style>
+/* Tombol ⬇️ di rekomendasi pantai */
 div.stButton > button {
     background: transparent !important;
     border: 1px solid #444 !important;
-    border-radius: 50% !important;
-    width: 40px !important;
-    height: 40px !important;
-    min-width: auto !important;
-    margin: 5px auto !important;
-    padding: 0 !important;
+    border-radius: 8px !important;
 }
 div.stButton > button:hover {
     background: #1e1e2e !important;
     border-color: #1E90FF !important;
-    transform: scale(1.1);
     transition: all 0.2s ease;
 }
 </style>

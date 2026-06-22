@@ -1,5 +1,7 @@
 # 🏖️ Search Engine Pantai Karimunjawa
 
+![Tampilan Aplikasi](image/tampilan.png)
+
 Aplikasi web interaktif untuk mengeksplorasi dan menganalisis review pantai di Karimunjawa dengan kemampuan pencarian cerdas berdasarkan rating, sentimen, dan kata kunci.
 
 ## 📋 Deskripsi Aplikasi

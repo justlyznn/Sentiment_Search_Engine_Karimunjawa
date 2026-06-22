@@ -81,7 +81,7 @@ cp label_data.csv data/labelling/label_data.csv
 
 ### 3. **Menjalankan Aplikasi**
 ```bash
-streamlit run app.py
+streamlit run app/app.py
 ```
 
 Aplikasi akan berjalan di `http://localhost:8501`

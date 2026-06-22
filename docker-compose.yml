@@ -1,0 +1,40 @@
+services:
+  # ─── FastAPI Backend ────────────────────────────────────────────────────────
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: karimunjawa-api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Shared data directory agar API bisa baca CSV
+      - ./data:/app/../data
+    environment:
+      - MODEL_NAME=w11wo/indonesian-roberta-base-sentiment-classifier
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s  # Model loading butuh waktu
+
+  # ─── Streamlit Frontend ─────────────────────────────────────────────────────
+  streamlit:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: karimunjawa-streamlit
+    ports:
+      - "8501:8501"
+    volumes:
+      # Shared data directory agar standalone mode tetap bisa baca CSV
+      - ./data:/app/../data
+    environment:
+      # Aktifkan API Mode — Streamlit akan memanggil FastAPI
+      - API_URL=http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped

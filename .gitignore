@@ -1,0 +1,77 @@
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+
+# ─── Virtual Environments ─────────────────────────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ─── Jupyter Notebooks ────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+# File .txt hasil konversi notebook (hanya untuk keperluan analisis)
+src/*.txt
+
+# ─── macOS ────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# ─── Docker ───────────────────────────────────────────────────────────────────
+# Tidak perlu ignore docker-compose.yml karena itu bagian dari project
+
+# ─── Data — Raw (ukuran besar, tidak perlu di-push) ──────────────────────────
+# CATATAN: data/labelling/label_data.csv HARUS di-push agar Streamlit Cloud bisa jalan
+data/raw/
+data/cleaning/
+data/preprocessing/
+
+# ─── Model cache (HuggingFace) ────────────────────────────────────────────────
+# Model IndoBERT di-download saat runtime, tidak perlu di-repo
+.cache/
+~/.cache/huggingface/
+
+# ─── IDE / Editor ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ─── Environment Variables ────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ─── Pytest / Testing ─────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ─── Misc ─────────────────────────────────────────────────────────────────────
+*.bak
+*.tmp
+Thumbs.db

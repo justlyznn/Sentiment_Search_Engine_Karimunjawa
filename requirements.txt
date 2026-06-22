@@ -1,9 +1,12 @@
 streamlit
 pandas
 numpy
-seaborn
-matplotlib
-nltk
-wordcloud
 transformers
+torch
 Sastrawi
+imbalanced-learn
+scikit-learn
+requests
+wordcloud
+matplotlib
+seaborn
